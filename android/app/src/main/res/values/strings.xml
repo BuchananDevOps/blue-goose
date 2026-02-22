@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Blue Goose</string>
+    <string name="title_activity_main">Blue Goose</string>
+    <string name="package_name">com.bluegoose.ecaller</string>
+    <string name="custom_url_scheme">com.bluegoose.ecaller</string>
+</resources>
