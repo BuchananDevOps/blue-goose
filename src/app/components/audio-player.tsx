@@ -428,14 +428,19 @@ export default function AudioPlayer({
               <button
                 key={track.id}
                 onClick={() => selectAndPlayTrack(index)}
-                className={`w-full text-left p-2 rounded text-sm transition-colors ${
+                className={`w-full text-left p-2 rounded text-sm transition-colors flex items-center justify-between ${
                   index === currentTrackIndex
                     ? 'bg-gradient-to-r from-blue-600/40 to-cyan-500/30 text-white border border-blue-400/30 shadow-[0_0_12px_rgba(59,130,246,0.5)]'
                     : 'hover:bg-blue-800/30 text-blue-200/80'
                 }`}
               >
-                <div className="font-medium">{track.title}</div>
-                <div className="text-gray-500">{track.artist}</div>
+                <div className="flex-1">
+                  <div className="font-medium">{track.title}</div>
+                  <div className="text-gray-500">{track.artist}</div>
+                </div>
+                <div className="text-xs text-blue-300/60 ml-2">
+                  {track.duration ? formatTime(track.duration) : '--:--'}
+                </div>
               </button>
             ))}
           </div>
